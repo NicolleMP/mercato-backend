@@ -19,7 +19,7 @@ public class User {
     private String email;
 
     @Column(nullable=false)
-    private String passowrd;
+    private String password;
 
     @Column(nullable=false)
     private String fullName;
