@@ -10,7 +10,8 @@ public class AuthResponse {
     private String refreshToken;
     private String tokenType = "Bearer";
 
-    public AuthResponse(String accessToken, String refreshTokenString) {
-
+    public AuthResponse(String accessToken, String refreshToken) {
+        this.accessToken = accessToken;
+        this.refreshToken = refreshToken;
     }
 }
