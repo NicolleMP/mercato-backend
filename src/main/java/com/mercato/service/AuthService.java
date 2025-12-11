@@ -38,6 +38,11 @@ public class AuthService {
     }
 
     public void register(RegisterRequest req) {
+
+        if (!req.getPassword().equals(req.getRepeatPassword())) {
+            throw new RuntimeException("As senhas fornecidas não coincidem.");
+        }
+
         if (userRepository.existsByEmail(req.getEmail())) {
             throw new RuntimeException("Email já cadastrado");
         }
